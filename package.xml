@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <package>
     <name>SCNet_iPayBy</name>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
     <extends/>
     <summary>SCNet iPayBy Payment Gateway</summary>
     <description>SCNet iPayBy Payment Gateway</description>
-    <notes>Repackage for 1.7.x</notes>
+    <notes>Repackage for 1.8.x</notes>
     <authors><author><name>SCNet</name><user>SCNet</user><email>support@scnet.com.au</email></author></authors>
-    <date>2013-09-18</date>
-    <time>12:29:37</time>
+    <date>2013-11-30</date>
+    <time>06:01:39</time>
     <contents><target name="magecommunity"><dir name="Scnet"><dir name="Ipayby"><dir name="Helper"><file name="Data.php" hash="d6397ee1ae45bbe37864a72fa1023f5c"/></dir><dir name="Model"><file name="CreditCard.php" hash="a60c18b2bdd9620d98ccc1f777d1fccc"/><file name="Observer.php" hash="c1f8b0be0f415bb103d775bd7f6bb8d8"/><file name="ResponseParser.php" hash="dc95564aeba3ccb9f9fbd68ee9073c90"/></dir><dir name="etc"><file name="config.xml" hash="a829c791e6305116f81cbe0fab9f566b"/><file name="system.xml" hash="2f1dccd58d21d83aa7ec789b02e1c661"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Scnet_Ipayby.xml" hash="bf1018cd9dc74b53586f595e64149dc0"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
