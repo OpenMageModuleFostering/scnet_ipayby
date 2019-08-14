@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<global>
+		<models>
+			<Scnet_Ipayby>
+				<class>Scnet_Ipayby_Model</class>
+			</Scnet_Ipayby>
+		</models>
+		<blocks>
+			<Scnet_Ipayby>
+				<class>Scnet_Ipayby_Block</class>
+			</Scnet_Ipayby>
+		</blocks>
+		<helpers>
+			<Scnet_Ipayby>
+				<class>Scnet_Ipayby_Helper</class>
+			</Scnet_Ipayby>
+		</helpers>
+		<events>
+			<payment_info_block_prepare_specific_information>
+				<observers>
+					<Scnet_Ipayby>
+						<class>Scnet_Ipayby/observer</class>
+						<method>paymentSpecificInformation</method>
+					</Scnet_Ipayby>
+				</observers>
+			</payment_info_block_prepare_specific_information>
+		</events>
+	</global>
+	<default>
+		<payment>
+			<scnet_ipayby>
+				<group>offline</group>
+				<model>Scnet_Ipayby/CreditCard</model>
+				<payment_action>authorize_capture</payment_action>
+				<active>0</active>
+				<title>SCNet iPayBy</title>
+				<order_status>pending</order_status>
+				<live_mode>0</live_mode>
+				<allowspecific>0</allowspecific>
+				<merchant_notification>0</merchant_notification>
+				<customer_notification>0</customer_notification>
+				<live_server_url>https://www.scnet.com.au/ipayby/ipaybyws?WSDL</live_server_url>
+				<test_server_url>https://www.scnet.com.au/ipayby/ipaybyws?WSDL</test_server_url>
+				<merchant_id>SCNet_Cert6</merchant_id>
+				<password>testSCNet</password>
+				<cctypes>AE,VI,MC,DI</cctypes>
+				<error_message>This payment method is currently unavailable. If you would like to pay using this payment method, please contact us.</error_message>
+			</scnet_ipayby>
+		</payment>
+	</default>
+</config>

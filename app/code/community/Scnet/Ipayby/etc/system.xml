@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+		<payment>
+			<groups>
+				<scnet_ipayby translate="label" module="Scnet_Ipayby">
+					<label>SCNet iPayBy</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>99</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label">
+							<label>Enabled</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</active>
+						<title translate="label">
+							<label>Title</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</title>
+						<order_status translate="label">
+							<label>New Order Status</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_order_status_new</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</order_status>
+						<live_mode translate="label">
+							<label>Live Mode</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</live_mode>
+						<live_server_url translate="label">
+							<label>Production URL</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>41</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</live_server_url>
+						<test_server_url translate="label">
+							<label>Test URL</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>42</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</test_server_url>
+						<merchant_id translate="label">
+							<label>Merchant ID</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>43</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</merchant_id>
+						<password translate="label">
+							<label>Password</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>44</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</password>
+						<cctypes translate="label">
+							<label>Credit Card Types</label>
+							<frontend_type>multiselect</frontend_type>
+							<source_model>adminhtml/system_config_source_payment_cctype</source_model>
+							<sort_order>45</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						</cctypes>
+						<merchant_notification translate="label">
+							<label>Merchant Notification</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>46</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</merchant_notification>
+						<merchant_email translate="label">
+							<label>Merchant Notification Email</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>47</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</merchant_email>
+						<customer_notification translate="label">
+							<label>Customer Receipt</label>
+							<frontend_type>select</frontend_type>
+							<comment>Send the customer a receipt from iPayBy</comment>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>48</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</customer_notification>
+						<merchat_abn translate="label">
+							<label>ABN</label>
+							<frontend_type>text</frontend_type>
+							<comment>If using this option, a TAX INVOICE header will appear on the email sent and the GST will be calculated automatically on the email. Use this if you do not want to send a separate invoice to the customer.</comment>
+							<sort_order>49</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</merchat_abn>
+						<allowspecific translate="label">
+							<label>Payment from Applicable Countries</label>
+							<frontend_type>allowspecific</frontend_type>
+							<sort_order>90</sort_order>
+							<source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</allowspecific>
+						<specificcountry translate="label">
+							<label>Payment from Specific Countries</label>
+							<frontend_type>multiselect</frontend_type>
+							<sort_order>91</sort_order>
+							<source_model>adminhtml/system_config_source_country</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						</specificcountry>
+						<min_order_total translate="label">
+							<label>Minimum Order Total</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>92</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</min_order_total>
+						<max_order_total translate="label">
+							<label>Maximum Order Total</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>93</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</max_order_total>
+						<error_message translate="label">
+							<label>Error message</label>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>94</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</error_message>
+						<sort_order translate="label">
+							<label>Sort Order</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</sort_order>
+						<debug translate="label">
+							<label>Debug Mode</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>101</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</debug>
+					</fields>
+				</scnet_ipayby>
+			</groups>
+		</payment>
+	</sections>
+</config>

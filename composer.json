@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/SCNet_iPayBy",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "SCNet iPayBy Payment Gateway",
+    "authors": [
+    {
+        "name": "SCNet",
+        "email": "support@scnet.com.au"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
