@@ -40,8 +40,8 @@
 				<allowspecific>0</allowspecific>
 				<merchant_notification>0</merchant_notification>
 				<customer_notification>0</customer_notification>
-				<live_server_url>https://www.scnet.com.au/ipayby/ipaybyws?WSDL</live_server_url>
-				<test_server_url>https://www.scnet.com.au/ipayby/ipaybyws?WSDL</test_server_url>
+				<live_server_url>https://www.scnet.com.au/ipayby/ipaybyws</live_server_url>
+				<test_server_url>https://www.scnet.com.au/ipayby/ipaybyws</test_server_url>
 				<merchant_id>SCNet_Cert6</merchant_id>
 				<password>testSCNet</password>
 				<cctypes>AE,VI,MC,DI</cctypes>

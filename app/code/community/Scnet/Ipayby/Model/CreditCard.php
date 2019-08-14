@@ -20,7 +20,7 @@
 	class Scnet_Ipayby_Model_CreditCard extends Mage_Payment_Model_Method_Cc {
 		
 		protected $_code = 'scnet_ipayby';
-		
+                
 		protected $_isGateway                   = true;
 		protected $_canOrder                    = false;
 		protected $_canAuthorize                = true;
@@ -45,14 +45,22 @@
 			
 			$_url = $this->_getServerUrl();
 			$_xml = $this->_generatePaymentXml($this->_prepareParams($amount));
-			
+                       
 			try {
+                             
 				$_res = $this->_connectServer($_url, $_xml);
+                              
 			}catch(Exception $e) {
+                                
 				throw Mage::Exception('Mage_Payment_Model_Info', $this->getConfigData('error_message'));
 			}
 			
 			if(!$_res->isSuccessful()) {
+                                
+                                 //TODO
+                                 $current .= "\n6" . 'Error';
+                                 file_put_contents($file, $current);
+                                 //TODO
 				throw Mage::Exception('Mage_Payment_Model_Info', $this->getConfigData('error_message'));
 			}
 			
@@ -63,14 +71,15 @@
 				throw Mage::Exception('Mage_Payment_Model_Info', $_error);
 			}
 			
-			$payment->setStatus(self::STATUS_SUCCESS)
+			$payment->setStatus(self::STATUS_APPROVED)
 				->setStatusDescription($_result->getData('responseText'))
 				->setTransactionId($_result->getData('orderNumber'))
 				->setIsTransactionClosed(0)
 				->setSuTransactionId($_result->getData('orderNumber'))
 				->setLastTransId($_result->getData('orderNumber'))
 			;
-			
+			       
+            		   
 			return $this;
 		}
 		
@@ -146,6 +155,8 @@
 		}
 		
 		protected function _connectServer($_url, $_xml) {
+
+
 			$_headers = array(
 				'Content-type: text/xml; charset=utf-8', 
 				'Content-length: ' . strlen($_xml),
@@ -153,12 +164,15 @@
 			$_httpClient = new Varien_Http_Client($_url);
 			$_httpClient->setHeaders($_headers);
 			$_httpClient->setRawData($_xml);
+
 			
 			$this->_debug(array('requestedUrl'=>$_url, 'requestedXml'=>$_xml));
 			
 			try {
 				$_response = $_httpClient->request(Varien_Http_Client::POST);
+
 			}catch(Exception $e) {
+
 				$this->_debug(array('Error' => $e->getMessage()));
 				throw $e;
 			}
