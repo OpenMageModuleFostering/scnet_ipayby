@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/SCNet_iPayBy",
+    "name": "openmage-module-fostering\/scnet_ipayby",
     "type": "magento-module",
-    "license": "OSL-v3.0",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "SCNet iPayBy Payment Gateway",
     "authors": [
